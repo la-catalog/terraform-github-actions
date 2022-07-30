@@ -17,12 +17,7 @@ variable "machine_user" {
   sensitive = true
 }
 
-variable "machine_pass" {
-  type      = string
-  sensitive = true
-}
-
 provider "docker" {
-  host  = "ssh://${var.machine_user}@${var.machine_ip}:22"
+  host     = "ssh://${var.machine_user}@${var.machine_ip}:22"
   ssh_opts = ["-o", "StrictHostKeyChecking=no", "-o", "UserKnownHostsFile=/dev/null"]
 }
