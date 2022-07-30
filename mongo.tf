@@ -1,9 +1,9 @@
-resource "docker_image" "mongo_img" {
+resource "docker_image" "mongo" {
   name = "mongo:latest"
 }
 
 resource "docker_container" "mongo" {
-  image = docker_image.mongo_img.latest
+  image = docker_image.mongo.latest
   name  = "mongo"
   ports {
     internal = 27017
