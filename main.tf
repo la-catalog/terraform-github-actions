@@ -23,11 +23,6 @@ variable "machine_pass" {
 }
 
 provider "docker" {
+  host  = "ssh://${var.machine_user}@${var.machine_ip}:22"
   ssh_opts = ["-o", "StrictHostKeyChecking=no", "-o", "UserKnownHostsFile=/dev/null"]
-
-  registry_auth {
-    address  = "${var.machine_ip}:22"
-    username = var.machine_user
-    password = var.machine_pass
-  }
 }
