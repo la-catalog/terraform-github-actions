@@ -1,1 +1,1 @@
-# actions
+# terraform-github-actions
