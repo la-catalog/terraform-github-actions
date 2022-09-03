@@ -17,7 +17,7 @@ resource "github_repository_file" "python_publish" {
   file                = ".github/workflows/python-publish.yml"
   content             = file("./workflows/python-publish.yml")
   commit_message      = "Update python-publish.yml"
-  commit_author       = "actions"
+  commit_author       = "actions" 
   commit_email        = "actions@github.com"
   overwrite_on_create = true
 }
