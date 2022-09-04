@@ -1,5 +1,5 @@
 resource "github_repository_file" "python_test" {
-  for_each            = toset(data.github_python_repositories.la_catalog.names)
+  for_each            = toset(data.github_repositories.python.names)
   repository          = each.key
   branch              = "main"
   file                = ".github/workflows/python-test.yml"
@@ -11,7 +11,7 @@ resource "github_repository_file" "python_test" {
 }
 
 resource "github_repository_file" "python_publish" {
-  for_each            = toset(data.github_python_repositories.la_catalog.names)
+  for_each            = toset(data.github_repositories.python.names)
   repository          = each.key
   branch              = "main"
   file                = ".github/workflows/python-publish.yml"

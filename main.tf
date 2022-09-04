@@ -18,6 +18,6 @@ provider "github" {
   read_delay_ms = 1000
 }
 
-data "github_python_repositories" "la_catalog" {
+data "github_repositories" "python" {
   query = "org:la-catalog topic:python"
 }
