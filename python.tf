@@ -1,4 +1,4 @@
-resource "github_repository_file" "python_test" {
+resource "github_repository_file" "test" {
   for_each            = toset(data.github_repositories.python.names)
   repository          = each.key
   branch              = "main"
@@ -10,14 +10,14 @@ resource "github_repository_file" "python_test" {
   overwrite_on_create = true
 }
 
-resource "github_repository_file" "python_publish" {
-  for_each            = toset(data.github_repositories.python.names)
+resource "github_repository_file" "publish" {
+  for_each            = toset(data.github_repositories.python_package.names)
   repository          = each.key
   branch              = "main"
   file                = ".github/workflows/python-publish.yml"
   content             = file("./workflows/python-publish.yml")
   commit_message      = "Update python-publish.yml"
-  commit_author       = "actions" 
+  commit_author       = "actions"
   commit_email        = "actions@github.com"
   overwrite_on_create = true
 }

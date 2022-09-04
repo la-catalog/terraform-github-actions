@@ -21,3 +21,7 @@ provider "github" {
 data "github_repositories" "python" {
   query = "org:la-catalog topic:python"
 }
+
+data "github_repositories" "python_package" {
+  query = "org:la-catalog topic:python topic:package"
+}
