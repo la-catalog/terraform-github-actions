@@ -3,7 +3,7 @@ resource "github_repository_file" "test" {
   repository          = each.key
   branch              = "main"
   file                = ".github/workflows/python-test.yml"
-  content             = file("./workflows/python-test.yml")
+  content             = file("./res/python-test.yml")
   commit_message      = "Update python-test.yml"
   commit_author       = "actions"
   commit_email        = "actions@github.com"
@@ -15,7 +15,7 @@ resource "github_repository_file" "publish" {
   repository          = each.key
   branch              = "main"
   file                = ".github/workflows/python-publish.yml"
-  content             = file("./workflows/python-publish.yml")
+  content             = file("./res/python-publish.yml")
   commit_message      = "Update python-publish.yml"
   commit_author       = "actions"
   commit_email        = "actions@github.com"
