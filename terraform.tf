@@ -7,5 +7,5 @@ resource "github_repository_file" "terraform_fmt" {
   commit_message      = "Update terraform-fmt.yml"
   commit_author       = "actions"
   commit_email        = "actions@github.com"
-  overwrite_on_create = true
+  overwrite_on_create  = true
 }
