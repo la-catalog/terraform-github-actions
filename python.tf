@@ -1,4 +1,4 @@
-resource "github_repository_file" "test" {
+resource "github_repository_file" "python_test" {
   for_each            = toset(data.github_repositories.python.names)
   repository          = each.key
   branch              = "main"
@@ -10,7 +10,7 @@ resource "github_repository_file" "test" {
   overwrite_on_create = true
 }
 
-resource "github_repository_file" "publish" {
+resource "github_repository_file" "python_publish" {
   for_each            = toset(data.github_repositories.python_package.names)
   repository          = each.key
   branch              = "main"

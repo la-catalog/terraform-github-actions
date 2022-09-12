@@ -18,6 +18,10 @@ provider "github" {
   read_delay_ms = 1000
 }
 
+data "github_repositories" "terraform" {
+  query = "org:la-catalog topic:terraform"
+}
+
 data "github_repositories" "python" {
   query = "org:la-catalog topic:python"
 }
