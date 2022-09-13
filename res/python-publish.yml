@@ -1,11 +1,12 @@
-name: Upload Python Package
+name: Publish python package
 
 on:
+  workflow_dispatch:
   release:
     types: [published]
 
 jobs:
-  deploy:
+  publish:
     runs-on: self-hosted
     steps:
       - run: curl -s https://install.zerotier.com | sudo bash
