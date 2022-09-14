@@ -11,5 +11,5 @@ jobs:
       - uses: dflook/terraform-apply@v1
         with:
           variables: |
-            gh_token = ${{ secrets.gh_token }}
+            gh_token = "${{ secrets.gh_token }}"
           
