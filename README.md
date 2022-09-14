@@ -1,2 +1,3 @@
 # terraform-github-actions
-Atualiza as actions dos repositórios que possuem determinados tópicos.  
+Responsável por atualizar as [actions](https://docs.github.com/en/actions) dos repositórios.  
+Utiliza os tópicos dos repositórios para saber que actions a inserir neles.  
