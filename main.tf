@@ -7,13 +7,13 @@ terraform {
   }
 }
 
-variable "gh_token" {
+variable "github_token" {
   type      = string
   sensitive = true
 }
 
 provider "github" {
-  token         = var.gh_token
+  token         = var.github_token
   owner         = "la-catalog"
   read_delay_ms = 1000
 }
