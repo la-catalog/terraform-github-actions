@@ -1,0 +1,1694 @@
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # github_repository_file.python_publish["catalog-models"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "catalog-models"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["page-fetcher"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-fetcher"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["page-infra"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-infra"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["page-models"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-models"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["page-parser"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-parser"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["python-package"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "python-package"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["rabbit-models"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "rabbit-models"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["text-utility"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "text-utility"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["url-builder"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "url-builder"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["url-parser"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "url-parser"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_publish["webpage-components"] will be created
+  + resource "github_repository_file" "python_publish" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-publish.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Publish python package
+            
+            on:
+              workflow_dispatch:
+              release:
+                types: [published]
+            
+            jobs:
+              publish:
+                runs-on: self-hosted
+                steps:
+                  - run: curl -s https://install.zerotier.com | sudo bash
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  # - run: pdm publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+                  # old, use as reference
+                  # - uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+                  #   with:
+                  #     user: ${{ secrets.PYPI_USER }}
+                  #     password: ${{ secrets.PYPI_PASSWORD }}
+                  #     repository_url: http://${{ secrets.PYPI_ADDRESS }}:${{ secrets.PYPI_PORT }}/simple/
+        EOT
+      + file                = ".github/workflows/python-publish.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "webpage-components"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["catalog-models"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "catalog-models"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["page-fetcher"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-fetcher"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["page-infra"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-infra"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["page-models"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-models"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["page-parser"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-parser"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["page-scraper"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "page-scraper"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["python-cronjob"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "python-cronjob"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["python-deployment"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "python-deployment"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["python-package"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "python-package"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["rabbit-models"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "rabbit-models"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["search-filler"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "search-filler"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["text-utility"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "text-utility"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["url-builder"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "url-builder"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["url-parser"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "url-parser"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["webpage-catalog"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "webpage-catalog"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["webpage-components"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "webpage-components"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.python_test["webpage-scraper"] will be created
+  + resource "github_repository_file" "python_test" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update python-test.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Test python code
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              test:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: pdm-project/setup-pdm@main
+                    with:
+                      python-version: "3.10"
+                      enable-pep582: true
+                  - run: pdm install
+                  - run: pdm run black
+                  - run: pdm run isort
+                  - run: pdm run unittest
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/python-test.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "webpage-scraper"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_apply["terraform-github-actions"] will be created
+  + resource "github_repository_file" "terraform_apply" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-apply.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Apply terraform changes
+            
+            on:
+              pull_request:
+                branches: [main]
+              workflow_dispatch:
+            
+            jobs:
+              apply:
+                runs-on: self-hosted
+                env:
+                  GITHUB_TOKEN: ${{ secrets.gh_token }}
+                steps:
+                  - uses: actions/checkout@v3
+            
+                  # On pull request
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'pull_request' }}
+                  
+                  # On workflow dispatch
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      auto_approve: true
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'workflow_dispatch' }}
+                  
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+                      pull: '--ff'
+        EOT
+      + file                = ".github/workflows/terraform-apply.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-actions"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_apply["terraform-github-dockerfile"] will be created
+  + resource "github_repository_file" "terraform_apply" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-apply.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Apply terraform changes
+            
+            on:
+              pull_request:
+                branches: [main]
+              workflow_dispatch:
+            
+            jobs:
+              apply:
+                runs-on: self-hosted
+                env:
+                  GITHUB_TOKEN: ${{ secrets.gh_token }}
+                steps:
+                  - uses: actions/checkout@v3
+            
+                  # On pull request
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'pull_request' }}
+                  
+                  # On workflow dispatch
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      auto_approve: true
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'workflow_dispatch' }}
+                  
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+                      pull: '--ff'
+        EOT
+      + file                = ".github/workflows/terraform-apply.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-dockerfile"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_apply["terraform-github-gitignore"] will be created
+  + resource "github_repository_file" "terraform_apply" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-apply.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Apply terraform changes
+            
+            on:
+              pull_request:
+                branches: [main]
+              workflow_dispatch:
+            
+            jobs:
+              apply:
+                runs-on: self-hosted
+                env:
+                  GITHUB_TOKEN: ${{ secrets.gh_token }}
+                steps:
+                  - uses: actions/checkout@v3
+            
+                  # On pull request
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'pull_request' }}
+                  
+                  # On workflow dispatch
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      auto_approve: true
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'workflow_dispatch' }}
+                  
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+                      pull: '--ff'
+        EOT
+      + file                = ".github/workflows/terraform-apply.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-gitignore"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_apply["terraform-github-labels"] will be created
+  + resource "github_repository_file" "terraform_apply" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-apply.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Apply terraform changes
+            
+            on:
+              pull_request:
+                branches: [main]
+              workflow_dispatch:
+            
+            jobs:
+              apply:
+                runs-on: self-hosted
+                env:
+                  GITHUB_TOKEN: ${{ secrets.gh_token }}
+                steps:
+                  - uses: actions/checkout@v3
+            
+                  # On pull request
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'pull_request' }}
+                  
+                  # On workflow dispatch
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      auto_approve: true
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'workflow_dispatch' }}
+                  
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+                      pull: '--ff'
+        EOT
+      + file                = ".github/workflows/terraform-apply.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-labels"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_apply["terraform-github-secrets"] will be created
+  + resource "github_repository_file" "terraform_apply" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-apply.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Apply terraform changes
+            
+            on:
+              pull_request:
+                branches: [main]
+              workflow_dispatch:
+            
+            jobs:
+              apply:
+                runs-on: self-hosted
+                env:
+                  GITHUB_TOKEN: ${{ secrets.gh_token }}
+                steps:
+                  - uses: actions/checkout@v3
+            
+                  # On pull request
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'pull_request' }}
+                  
+                  # On workflow dispatch
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      auto_approve: true
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'workflow_dispatch' }}
+                  
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+                      pull: '--ff'
+        EOT
+      + file                = ".github/workflows/terraform-apply.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-secrets"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_apply["terraform-services"] will be created
+  + resource "github_repository_file" "terraform_apply" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-apply.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Apply terraform changes
+            
+            on:
+              pull_request:
+                branches: [main]
+              workflow_dispatch:
+            
+            jobs:
+              apply:
+                runs-on: self-hosted
+                env:
+                  GITHUB_TOKEN: ${{ secrets.gh_token }}
+                steps:
+                  - uses: actions/checkout@v3
+            
+                  # On pull request
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'pull_request' }}
+                  
+                  # On workflow dispatch
+                  - uses: dflook/terraform-apply@v1
+                    with:
+                      auto_approve: true
+                      variables: |
+                        gh_token = "***********************"
+                    if: ${{ github.event_name == 'workflow_dispatch' }}
+                  
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+                      pull: '--ff'
+        EOT
+      + file                = ".github/workflows/terraform-apply.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-services"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_fmt["terraform-github-actions"] will be created
+  + resource "github_repository_file" "terraform_fmt" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-fmt.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Format terraform files
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              format:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: dflook/terraform-fmt@v1
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/terraform-fmt.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-actions"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_fmt["terraform-github-dockerfile"] will be created
+  + resource "github_repository_file" "terraform_fmt" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-fmt.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Format terraform files
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              format:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: dflook/terraform-fmt@v1
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/terraform-fmt.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-dockerfile"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_fmt["terraform-github-gitignore"] will be created
+  + resource "github_repository_file" "terraform_fmt" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-fmt.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Format terraform files
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              format:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: dflook/terraform-fmt@v1
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/terraform-fmt.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-gitignore"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_fmt["terraform-github-labels"] will be created
+  + resource "github_repository_file" "terraform_fmt" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-fmt.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Format terraform files
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              format:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: dflook/terraform-fmt@v1
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/terraform-fmt.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-labels"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_fmt["terraform-github-secrets"] will be created
+  + resource "github_repository_file" "terraform_fmt" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-fmt.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Format terraform files
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              format:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: dflook/terraform-fmt@v1
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/terraform-fmt.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-github-secrets"
+      + sha                 = (known after apply)
+    }
+
+  # github_repository_file.terraform_fmt["terraform-services"] will be created
+  + resource "github_repository_file" "terraform_fmt" {
+      + branch              = "main"
+      + commit_author       = "actions"
+      + commit_email        = "actions@github.com"
+      + commit_message      = "Update terraform-fmt.yml"
+      + commit_sha          = (known after apply)
+      + content             = <<-EOT
+            name: Format terraform files
+            
+            on:
+              push:
+                branches: [main]
+              pull_request:
+                branches: [main]
+            
+            jobs:
+              format:
+                runs-on: self-hosted
+                steps:
+                  - uses: actions/checkout@v3
+                  - uses: dflook/terraform-fmt@v1
+                  - uses: EndBug/add-and-commit@v9
+                    with:
+                      message: Workflow fix
+                      committer_name: actions
+                      committer_email: actions@github.com
+        EOT
+      + file                = ".github/workflows/terraform-fmt.yml"
+      + id                  = (known after apply)
+      + overwrite_on_create = true
+      + repository          = "terraform-services"
+      + sha                 = (known after apply)
+    }
+
+Plan: 40 to add, 0 to change, 0 to destroy.
