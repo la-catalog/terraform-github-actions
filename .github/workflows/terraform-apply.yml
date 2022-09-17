@@ -1,9 +1,9 @@
 name: Apply terraform changes
 
 on:
+  workflow_dispatch:
   pull_request:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
   apply:
