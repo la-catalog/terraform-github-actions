@@ -8,6 +8,13 @@ resource "github_repository_file" "terraform_fmt" {
   commit_author       = "actions"
   commit_email        = "actions@github.com"
   overwrite_on_create = true
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
 
 resource "github_repository_file" "terraform_apply" {
@@ -20,4 +27,11 @@ resource "github_repository_file" "terraform_apply" {
   commit_author       = "actions"
   commit_email        = "actions@github.com"
   overwrite_on_create = true
+
+  lifecycle {
+    ignore_changes = [
+      commit_author,
+      commit_email
+    ]
+  }
 }
