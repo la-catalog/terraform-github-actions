@@ -1,6 +1,5 @@
 name: Apply terraform changes
-permissions:
-  contents: write
+permissions: write-all
 
 on:
   workflow_dispatch:
