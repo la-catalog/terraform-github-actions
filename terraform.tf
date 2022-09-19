@@ -11,6 +11,7 @@ resource "github_repository_file" "terraform_fmt" {
 
   lifecycle {
     ignore_changes = [
+      commit_message,
       commit_author,
       commit_email
     ]
@@ -30,6 +31,7 @@ resource "github_repository_file" "terraform_apply" {
 
   lifecycle {
     ignore_changes = [
+      commit_message,
       commit_author,
       commit_email
     ]
