@@ -1,5 +1,4 @@
 name: Apply terraform changes
-permissions: write-all
 
 on:
   workflow_dispatch:
@@ -8,14 +7,14 @@ jobs:
   apply:
     runs-on: self-hosted
     env:
-      GITHUB_TOKEN: ${{ secrets.github_token }}
+      GITHUB_TOKEN: ${{ secrets.gh_token }}
     steps:
       - uses: actions/checkout@v3
       - uses: dflook/terraform-apply@v1
         with:
           auto_approve: true
           variables: |
-            github_token = "${{ secrets.github_token }}"
+            gh_token = "${{ secrets.gh_token }}"
       - uses: EndBug/add-and-commit@v9
         with:
           message: Workflow fix
