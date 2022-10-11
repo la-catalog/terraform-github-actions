@@ -57,3 +57,23 @@ resource "github_repository_file" "python_publish" {
     ]
   }
 }
+
+resource "github_repository_file" "python_version" {
+  for_each            = toset(data.github_repositories.python_package.names)
+  repository          = each.key
+  branch              = "main"
+  file                = ".github/workflows/python-version.yml"
+  content             = file("./res/python-version.yml")
+  commit_message      = "Update python-version.yml"
+  commit_author       = "actions"
+  commit_email        = "actions@github.com"
+  overwrite_on_create = true
+
+  lifecycle {
+    ignore_changes = [
+      commit_message,
+      commit_author,
+      commit_email
+    ]
+  }
+}
