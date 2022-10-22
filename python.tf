@@ -5,8 +5,8 @@ resource "github_repository_file" "python_test" {
   file                = ".github/workflows/python-test.yml"
   content             = file("./res/python-test.yml")
   commit_message      = "Update python-test.yml"
-  commit_author       = "actions"
-  commit_email        = "actions@github.com"
+  commit_author       = "github-actions"
+  commit_email        = "github-actions[bot]@users.noreply.github.com"
   overwrite_on_create = true
 
   lifecycle {
@@ -25,8 +25,8 @@ resource "github_repository_file" "python_update" {
   file                = ".github/workflows/python-update.yml"
   content             = file("./res/python-update.yml")
   commit_message      = "Update python-update.yml"
-  commit_author       = "actions"
-  commit_email        = "actions@github.com"
+  commit_author       = "github-actions"
+  commit_email        = "github-actions[bot]@users.noreply.github.com"
   overwrite_on_create = true
 
   lifecycle {
@@ -45,8 +45,8 @@ resource "github_repository_file" "python_publish" {
   file                = ".github/workflows/python-publish.yml"
   content             = file("./res/python-publish.yml")
   commit_message      = "Update python-publish.yml"
-  commit_author       = "actions"
-  commit_email        = "actions@github.com"
+  commit_author       = "github-actions"
+  commit_email        = "github-actions[bot]@users.noreply.github.com"
   overwrite_on_create = true
 
   lifecycle {
