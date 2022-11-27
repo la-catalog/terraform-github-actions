@@ -8,5 +8,4 @@ on:
 
 jobs:
   format:
-    runs-on: self-hosted
     uses: la-catalog/github-actions/.github/workflows/terraform_fmt.yml@main
